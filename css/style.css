@@ -7,7 +7,7 @@
   --secondary: #045571;
   
   --white: #fff;
-  --black: #000;
+  --black: #010101;
 
   --speed: .15s ease-in-out;
 }
@@ -183,6 +183,10 @@ body {
   background-color: #E5F5FA;
 }
 
+.btn-secondary:active {
+  background-color: #004B64;
+}
+
 @media (hover: hover) {
   .btn-primary:hover {
     background-color: #0A90BD;  
@@ -190,6 +194,10 @@ body {
 
   .btn-lite:hover {
     background-color: #D4ECF4;
+  }
+
+  .btn-secondary:hover {
+    background-color: #036E92;
   }
 }
 
@@ -249,11 +257,33 @@ body {
   color: var(--black);
   box-shadow: 0px 1px 2px 0px #0000001A;
   transition: var(--speed);
+  outline: none;
 }
 
 .input-wrp textarea {
   min-height: 130px;
   resize: none;
+}
+
+.input-wrp input:focus,
+.input-wrp textarea:focus,
+.input-wrp input:active,
+.input-wrp textarea:active {
+  border-color: #045571;
+}
+
+.input-wrp input:focus,
+.input-wrp textarea:focus {
+  background-color: #F8FDFF;
+}
+
+@media (hover: hover) {
+  .input-wrp input:not(:focus):hover,
+  .input-wrp textarea:not(:focus):hover,
+  .input-wrp input:active:hover,
+  .input-wrp textarea:active:hover {
+    border-color: #DBEAEF;
+  }
 }
 
 .input-wrp--check {
@@ -270,7 +300,7 @@ body {
   border-radius: 6px;
   padding: 5px;
   flex-shrink: 0;
-  border: 1px solid transparent;
+  border: 1px solid #045571;
   transition: var(--speed);
 }
 
@@ -279,7 +309,7 @@ body {
 }
 
 .input-wrp--check input:not(:checked) {
-  background-color: var(--primary);
+  background-color: transparent;
 }
 
 /*  */
@@ -318,6 +348,23 @@ body {
   background-color: transparent;
   border: 1px solid #E0E0E0;
   font-size: 14px;
+  transition: var(--speed);
+}
+
+.header-search input:active,
+.header-search input:focus {
+  border-color: #01A2D8;
+}
+
+.header-search input:focus {
+  background-color: #F8FDFF;
+}
+
+@media (hover: hover) {
+  .header-search input:hover,
+  .header-search input:not(:focus):hover {
+    border-color: #DBEAEF;
+  }
 }
 
 .header-search input::placeholder {
@@ -354,6 +401,12 @@ body {
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media (hover: hover) {
+  .top-menu a:hover {
+    background-color: #036E92;
+  }
 }
 
 .hero-img {
@@ -632,4 +685,22 @@ body {
   color: var(--white);
   font-style: normal;
   font-size: 14px;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  background: #00000066 url(../media/img/icons/slide-arrow.svg) center / 12px no-repeat;
+}
+
+.swiper-button-prev {
+  rotate: 180deg;
+}
+
+.swiper-button-next::after, 
+.swiper-button-prev::after {
+  content: '';
+  display: none;
 }
