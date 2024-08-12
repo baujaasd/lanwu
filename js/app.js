@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("load")
+
+  // loader
+  (() => {
+    const loader = document.querySelector("#loader");
+    setTimeout(() => {
+      loader?.classList.add("load");
+    }, 250);
+  })();
 
   // swipers
   var swiper = new Swiper(".about-swiper", {
