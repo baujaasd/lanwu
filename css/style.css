@@ -541,6 +541,10 @@ body {
   margin: 0 0 12px;
 }
 
+.footer-address {
+  display: block;
+}
+
 .footer-address * {
   color: var(--white);
   font-style: normal;
