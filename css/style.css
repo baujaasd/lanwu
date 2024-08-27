@@ -846,3 +846,37 @@ body {
 #to_top:active {
   background: #036E92 url("../media/img/icons/arrow-top.svg") center / 18px no-repeat;
 }
+
+.breadcrumbs {
+  display: flex;
+  padding: 24px 0;
+}
+
+.breadcrumbs li {
+  position: relative;
+}
+
+.breadcrumbs li:not(:last-child):before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  translate: 100% -50%;
+  width: 16px;
+  height: 16px;
+  background: transparent url("../media/img/icons/breadcrimb-arrow.svg") center / contain no-repeat;
+}
+
+.breadcrumbs li a,
+.breadcrumbs li {
+  font-size: 12px;
+  color: #010101;
+}
+
+.breadcrumbs li:not(:last-child) {
+  margin: 0 28px 0 0;
+}
+
+.breadcrumbs li:last-child {
+  color: #595959;
+}

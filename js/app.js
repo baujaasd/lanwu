@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   // loader
   (() => {
     const loader = document.querySelector("#loader");
@@ -13,11 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const btn = document.getElementById("to_top");
     if (btn) {
       window.addEventListener("scroll", () => {
-        window.scrollY > window.innerHeight ? btn.classList.add("show") : btn.classList.remove("show")
-      })
+        window.scrollY > window.innerHeight
+          ? btn.classList.add("show")
+          : btn.classList.remove("show");
+      });
       btn.addEventListener("click", () => {
-        window.scrollTo(0, 0)
-      })
+        window.scrollTo(0, 0);
+      });
     }
   })();
 
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       extend: {
         container: {
           center: true,
-          padding: '12px',
+          padding: "12px",
         },
         screens: {
           xs: "575px",
@@ -43,9 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
           md: "768px",
           lg: "1024px",
           xl: "1280px",
-          '2xl': "1344px",
-        }
-      }
-    }
-  }
-})
+          "2xl": "1344px",
+        },
+      },
+    },
+  };
+});
