@@ -126,6 +126,10 @@ body {
   background-color: var(--white);
 }
 
+body {
+  counter-reset: steps;
+}
+
 /* shorts */
 .min-w-unset {
   min-width: unset !important;
@@ -703,4 +707,109 @@ body {
 .swiper-button-prev::after {
   content: '';
   display: none;
+}
+
+.steps-wrp {
+  background-color: #92D7EE33;
+}
+
+.steps {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12%;
+  min-height: 420px;
+}
+
+.steps::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 50%;
+  translate: 0 -50%;
+  height: 2px;
+  background-color: #045571;
+}
+
+.steps li {
+  position: relative;
+}
+
+.steps li::before {
+  counter-increment: steps;
+  content: "0" counter(steps);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 40px;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #045571;
+}
+
+.step-card {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  width: 300px;
+  min-height: 148px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #045571;
+  border-radius: 6px;
+  text-align: center;
+  padding: 14px;
+  font-size: 18px;
+}
+
+.step-card::before,
+.step-card::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #045571;
+}
+
+.steps li:nth-child(odd) .step-card:before {
+  bottom: -10px;
+  translate: -50% 100%;
+}
+
+.steps li:nth-child(odd) .step-card::after {
+  bottom: -26px;
+  translate: -50% 100%;
+}
+
+.steps li:nth-child(even) .step-card::before {
+  top: -10px;
+  translate: -50% -100%;
+}
+
+.steps li:nth-child(even) .step-card::after {
+  top: -26px;
+  translate: -50% -100%;
+}
+
+.steps li:nth-child(odd) .step-card {
+  top: unset;
+  bottom: calc(100% + 62px);
+}
+
+.steps li:nth-child(even) .step-card {
+  top: calc(100% + 62px);
+  bottom: unset;
 }
