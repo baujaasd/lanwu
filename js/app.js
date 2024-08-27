@@ -8,6 +8,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 250);
   })();
 
+  // to top
+  (() => {
+    const btn = document.getElementById("to_top");
+    if (btn) {
+      window.addEventListener("scroll", () => {
+        window.scrollY > window.innerHeight ? btn.classList.add("show") : btn.classList.remove("show")
+      })
+      btn.addEventListener("click", () => {
+        window.scrollTo(0, 0)
+      })
+    }
+  })();
+
   // swipers
   var swiper = new Swiper(".about-swiper", {
     navigation: {

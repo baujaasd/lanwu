@@ -813,3 +813,36 @@ body {
   top: calc(100% + 62px);
   bottom: unset;
 }
+
+#to_top {
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  outline: 0;
+  border-radius: 6px;
+  background: #01A2D8 url("../media/img/icons/arrow-top.svg") center / 18px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  scale: 90%;
+  transition: var(--speed);
+  z-index: 100;
+}
+
+#to_top.show {
+  opacity: 1;
+  visibility: visible;
+  scale: 100%;
+}
+
+@media (hover: hover) {
+  #to_top:hover {
+    background: #0A90BD url("../media/img/icons/arrow-top.svg") center / 18px no-repeat;
+  }
+}
+
+#to_top:active {
+  background: #036E92 url("../media/img/icons/arrow-top.svg") center / 18px no-repeat;
+}
