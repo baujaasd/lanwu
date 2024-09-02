@@ -990,3 +990,67 @@ body {
   gap: 32px;
   padding: 24px 12px;
 }
+
+.faq-wrp {
+  max-width: 988px;
+}
+
+.details {
+  appearance: none;
+  padding: 24px 12px;
+  border-bottom: 1px solid #045571;
+  list-style: none;
+  user-select: none;
+}
+
+.details:not(:last-child) {
+  margin: 0 0 24px;
+}
+
+.details summary {
+  position: relative;
+  list-style: none;
+  appearance: none;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: var(--speed);
+}
+
+@media (hover: hover) {
+  .details:hover summary {
+    color: #045571;
+  }
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::marker {
+  display: none;
+}
+
+.details summary::before {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  translate: 0 -50%;
+  width: 24px;
+  height: 24px;
+  background: transparent url("../media/img/icons/plus.svg") center / 24px no-repeat;
+  transition: var(--speed);
+}
+
+.details[open] summary::before {
+  rotate: 45deg;
+}
+
+.details[open] summary {
+  color: #045571;
+}
+
+.details-content {
+  padding: 12px 0 0;
+}
