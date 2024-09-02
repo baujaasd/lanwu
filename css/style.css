@@ -424,6 +424,11 @@ body {
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 6px;
+}
+
+.top-menu a.active {
+  background-color: #036E92;
 }
 
 @media (hover: hover) {
