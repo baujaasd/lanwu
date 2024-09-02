@@ -965,3 +965,28 @@ body {
   justify-content: space-between;
   align-items: center©;
 }
+
+.reviews-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+}
+
+.reviews-list img {
+  padding: 40px;
+  border-radius: 6px;
+  border: 1px solid #F3F3F3;
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cta-review {
+  background-color: #E9F7FC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 24px 12px;
+}
