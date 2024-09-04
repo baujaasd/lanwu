@@ -45,11 +45,59 @@ document.addEventListener("DOMContentLoaded", function () {
     } else return
   })();
 
+  // tabs
+  document.querySelectorAll('.tabs').forEach((tabsContainer, containerIndex) => {
+    const tabs = tabsContainer.querySelectorAll('[role="tab"]');
+    const tabPanels = tabsContainer.querySelectorAll('[role="tabpanel"]');
+  
+    tabs.forEach((tab, index) => {
+      const panelId = `tabpanel${containerIndex}-${index}`;
+      const tabId = `tab${containerIndex}-${index}`;
+      
+      tab.setAttribute('href', `#${panelId}`);
+      tab.setAttribute('aria-controls', panelId);
+      tab.setAttribute('id', tabId);
+      
+      tabPanels[index].setAttribute('id', panelId);
+      tabPanels[index].setAttribute('aria-labelledby', tabId);
+    });
+  
+    tabs.forEach(tab => {
+      tab.addEventListener('click', event => {
+        event.preventDefault();
+  
+        tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+        tab.setAttribute('aria-selected', 'true');
+  
+        tabPanels.forEach(panel => panel.hidden = true);
+        const targetPanel = tabsContainer.querySelector(tab.getAttribute('href'));
+        targetPanel.hidden = false;
+      });
+    });
+  });  
+
   // swipers
   var swiper = new Swiper(".about-swiper", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+  });
+
+  var productSwiper = new Swiper(".product-swiper--thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var productSwiper2 = new Swiper(".product-swiper", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: productSwiper,
     },
   });
 
