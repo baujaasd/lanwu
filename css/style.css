@@ -1384,3 +1384,55 @@ summary::marker {
 [data-fancybox] {
   cursor: zoom-in;
 }
+
+.table-wrp {
+  display: block;
+}
+
+.table-wrp table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 6px;
+  border-style: hidden; /* hide standard table (collapsed) border */
+  box-shadow: 0 0 0 1px #045571; /* this draws the table border  */ 
+}
+
+.table-wrp tr:first-child {
+  border-top: 1px solid #045571;
+}
+
+.table-wrp tr {
+  border-bottom: 1px solid #045571;
+}
+
+.table-wrp th {
+  font-weight: 600;
+  text-align: center;
+  color: var(--white);
+  padding: 12px;
+  background-color: #01A2D8;
+  border-right: 1px solid #045571;
+}
+
+.table-wrp td {
+  padding: 12px;
+  text-align: center;
+  border-right: 1px solid #045571;
+}
+
+.table-wrp tr td:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+
+.table-wrp tr:first-child th:first-child,
+.table-wrp tr:first-child td:first-child {
+  border-left: 1px solid #045571;
+  border-top-left-radius: 6px;
+}
+
+.table-wrp tr:first-child th:last-child,
+.table-wrp tr:first-child td:last-child {
+  border-top-right-radius: 6px;
+} 
