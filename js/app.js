@@ -74,7 +74,13 @@ document.addEventListener("DOMContentLoaded", function () {
         targetPanel.hidden = false;
       });
     });
-  });  
+  });
+
+  // fancybox
+  Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+  });
+  
 
   // swipers
   var swiper = new Swiper(".about-swiper", {
