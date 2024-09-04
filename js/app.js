@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 250);
   })();
 
+  // header heihgt
+  (() => {
+    const header = document.querySelector(".header");
+    if (header) {
+      document.documentElement.style.setProperty("--headerHeight", `${header.clientHeight}px`);
+    } else return
+  })();
+
   // to top
   (() => {
     const btn = document.getElementById("to_top");
@@ -19,7 +27,22 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.addEventListener("click", () => {
         window.scrollTo(0, 0);
       });
-    }
+    } else return
+  })();
+
+  // catalog menu list
+  (() => {
+    const menu = document.querySelector("#catalog-list");
+    if (menu) {
+      menu.addEventListener("click", (e) => {
+        if (e.target.nodeName === "A" && e.target.nextElementSibling.nodeName === "UL") {
+          e.preventDefault();
+          e.stopPropagation();
+          let target = e.target;
+          target.parentNode.classList.toggle("active");
+        }
+      })
+    } else return
   })();
 
   // swipers

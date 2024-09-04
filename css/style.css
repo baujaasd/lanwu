@@ -926,22 +926,22 @@ body {
   border-radius: 6px;
 }
 
-.why-numeric {
+.list-numeric {
   
 }
 
-.why-numeric li:not(:last-child) {
+.list-numeric li:not(:last-child) {
   margin: 0 0 18px;
 }
 
-.why-numeric h4 {
+.list-numeric h4 {
   color: #045571;
   font-size: 16px;
   margin: 0 0 6px;
   font-weight: 600;
 }
 
-.why-numeric p {
+.list-numeric p {
   font-size: 16px;
 }
 
@@ -1125,4 +1125,92 @@ summary::marker {
   gap: 32px;
   padding: 24px 12px;
   border-radius: 6px;
+}
+
+.catalog-page {
+  display: grid;
+  grid-template-columns: 320px auto;
+  gap: 20px;
+}
+
+.catalog-list--wrp {
+  position: sticky;
+  /* top: calc(var(--headerHeight) + 12px); */
+  top: 12px;
+  background-color: #F8F8F8;
+  border-radius: 6px;
+  padding: 10px 14px;
+  height: max-content;
+}
+
+.catalog-list {
+  height: max-content;
+}
+
+.catalog-list > li {
+  position: relative;
+}
+
+.catalog-list > li > a {
+  display: block;
+  position: relative;
+  /* color: #045571; */
+
+  font-weight: 700;
+  padding: 7px 28px 7px 0px;
+  text-transform: uppercase;
+}
+
+.catalog-list > li > a::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  translate: 0 -50%;
+  width: 24px;
+  height: 24px;
+  background: transparent url("../media/img/icons/menu-arrow.svg") center / contain no-repeat;
+  transition: var(--speed);
+}
+
+.catalog-list > li.active > a::before {
+  rotate: 180deg;
+}
+
+.catalog-list > li > ul {
+  max-height: 0px;
+  overflow: hidden;
+  transition: var(--speed);
+}
+
+.catalog-list > li.active > ul {
+  max-height: unset;
+}
+
+.catalog-list > li > ul > li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.catalog-list > li > ul > li::marker {
+  color: #045571;
+}
+
+.catalog-list > li > ul > li:not(:last-child) {
+  margin: 0 0 8px;
+}
+
+.catalog-list > li > ul > li > a {
+  display: inline-block;
+  padding: 6px 8px;
+  color: var(--black);
+  border-radius: 6px;
+  transition: var(--speed);
+}
+
+@media (hover: hover) {
+  .catalog-list > li > ul > li > a:hover {
+    background-color: #045571;
+    color: var(--white);
+  }
 }
