@@ -1,0 +1,46 @@
+doctype html
+html(lang="ru")
+  //- head
+  include includes/head.pug
+  body
+    //-loader
+    include includes/loader.pug
+    //- header
+    include includes/header.pug
+    //-top menu
+    include includes/top-menu.pug
+    //-breadcrumbs
+    .container
+      nav(aria-label="breadcrumb")
+        ol.breadcrumbs
+          li
+            a(href="/lanwu/", title="Главная") Главная
+          li
+            a(href="/about.html", title="О компании") О компании
+          li(aria-current="page") Отзывы и благодарственные письма
+    section.content
+      .container
+        h1.page-title.main.mb-8 Отзывы и благодарственные письма
+        p Ваши отзывы – наша мотивация! Мы работаем ради вашего успеха и всегда рады слышать положительные отзывы о нашей работе.
+        .reviews-list.mt-8.mb-16
+          img(data-fancybox="reviews-gallery", loading="lazy", src="/media/img/review.jpg", data-caption="Отзыв", alt="Отзыв")
+          img(data-fancybox="reviews-gallery", loading="lazy", src="/media/img/review.jpg", data-caption="Отзыв", alt="Отзыв")
+          img(data-fancybox="reviews-gallery", loading="lazy", src="/media/img/review.jpg", data-caption="Отзыв", alt="Отзыв")
+          img(data-fancybox="reviews-gallery", loading="lazy", src="/media/img/review.jpg", data-caption="Отзыв", alt="Отзыв")
+          img(data-fancybox="reviews-gallery", loading="lazy", src="/media/img/review.jpg", data-caption="Отзыв", alt="Отзыв")
+          img(data-fancybox="reviews-gallery", loading="lazy", src="/media/img/review.jpg", data-caption="Отзыв", alt="Отзыв")
+      .container
+        .cta-review.mb-16
+          img(loading="lazy", aria-hidden="true", src="/media/img/icons/cta-review.svg", alt="")
+          p
+            strong Вам понравилось с нами работать?
+            | Оставьте отзыв и поделитесь своим опытом!
+          button(data-popup="#", type="button", title="Оставить отзыв", class="btn.btn-primary") Оставить отзыв
+    section.cta-popup--wrp
+      .container
+        h3.page-title.md.mb-8 Свяжитесь с нами
+        .cta-popup--flex
+          p Не нашли ответ на свой вопрос? Оставьте свои контактные данные, и наши специалисты свяжутся с вами в ближайшее время.
+          button(data-popup="#", type="button", title="Задать вопрос", class="btn.btn-secondary") Задать вопрос
+    //-footer
+    include includes/footer.pug

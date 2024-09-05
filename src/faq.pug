@@ -1,0 +1,52 @@
+doctype html
+html(lang="ru")
+  //- head
+  include includes/head.pug
+  body
+    //-loader
+    include includes/loader.pug
+    //- header
+    include includes/header.pug
+    //-top menu
+    include includes/top-menu.pug
+    //-breadcrumbs
+    .container
+      nav(aria-label="breadcrumb")
+        ol.breadcrumbs
+          li
+            a(href="/lanwu/", title="Главная") Главная
+          li
+            a(href="/about.html", title="О компании") О компании
+          li(aria-current="page") Вопросы и ответы
+    section.content
+      .container
+        h1.page-title.main.mb-8 Вопросы и ответы
+        .faq-wrp.mb-32
+          details.details
+            summary Какая стоимость оборудования?
+            .details-content
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus architecto exercitationem velit, pariatur earum repellendus! Tempore reprehenderit enim cupiditate debitis possimus consequatur qui nostrum quasi sit laborum! Laudantium, earum incidunt.
+          details.details
+            summary Какая стоимость оборудования?
+            .details-content
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus architecto exercitationem velit, pariatur earum repellendus! Tempore reprehenderit enim cupiditate debitis possimus consequatur qui nostrum quasi sit laborum! Laudantium, earum incidunt.
+          details.details
+            summary Какая стоимость оборудования?
+            .details-content
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus architecto exercitationem velit, pariatur earum repellendus! Tempore reprehenderit enim cupiditate debitis possimus consequatur qui nostrum quasi sit laborum! Laudantium, earum incidunt.
+          details.details
+            summary Какая стоимость оборудования?
+            .details-content
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus architecto exercitationem velit, pariatur earum repellendus! Tempore reprehenderit enim cupiditate debitis possimus consequatur qui nostrum quasi sit laborum! Laudantium, earum incidunt.
+          details.details
+            summary Какая стоимость оборудования?
+            .details-content
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus architecto exercitationem velit, pariatur earum repellendus! Tempore reprehenderit enim cupiditate debitis possimus consequatur qui nostrum quasi sit laborum! Laudantium, earum incidunt.
+    section.cta-popup--wrp
+      .container
+        h3.page-title.md.mb-8 Свяжитесь с нами
+        .cta-popup--flex
+          p Не нашли ответ на свой вопрос? Оставьте свои контактные данные, и наши специалисты свяжутся с вами в ближайшее время.
+          button(data-popup="#", type="button", title="Задать вопрос", class="btn btn-secondary") Задать вопрос
+    //-footer
+    include includes/footer.pug

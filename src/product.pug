@@ -1,0 +1,296 @@
+doctype html
+html(lang="ru")
+  //- head
+  include includes/head.pug
+  body
+    //-loader
+    include includes/loader.pug
+    //- header
+    include includes/header.pug
+    //-top menu
+    include includes/top-menu.pug
+    //-breadcrumbs
+    .container
+      nav(aria-label="breadcrumb")
+        ol.breadcrumbs
+          li
+            a(href="/lanwu/", title="Главная") Главная
+          li
+            a(href="/catalog.html", title="Оборудование") Оборудование
+          li
+            a(href="/catalog2.html", title="Механическая очистка") Механическая очистка
+          li(aria-current="page") Гиперболическая мешалка JBQ
+    .container
+      section.product-page
+        h1.page-title.main.mb-12 Гиперболическая мешалка JBQ
+        .product-hero
+          .product-images--wrp
+            .swiper.product-swiper
+              .swiper-wrapper
+                .swiper-slide
+                  img(data-fancybox="product-gallery", data-caption="Гиперболическая мешалка JBQ", src="/media/img/product-image.png", alt="Гиперболическая мешалка JBQ ")
+                .swiper-slide
+                  img(data-fancybox="product-gallery", data-caption="Гиперболическая мешалка JBQ", src="/media/img/product-image.png", alt="Гиперболическая мешалка JBQ ")
+                .swiper-slide
+                  img(data-fancybox="product-gallery", data-caption="Гиперболическая мешалка JBQ", src="/media/img/product-image.png", alt="Гиперболическая мешалка JBQ ")
+                .swiper-slide
+                  img(data-fancybox="product-gallery", data-caption="Гиперболическая мешалка JBQ", src="/media/img/product-image.png", alt="Гиперболическая мешалка JBQ ")
+                .swiper-slide
+                  img(data-fancybox="product-gallery", data-caption="Гиперболическая мешалка JBQ", src="/media/img/product-image.png", alt="Гиперболическая мешалка JBQ ")
+                .swiper-slide
+                  img(data-fancybox="product-gallery", data-caption="Гиперболическая мешалка JBQ", src="/media/img/product-image.png", alt="Гиперболическая мешалка JBQ ")
+                .swiper-slide
+                  img(data-fancybox="product-gallery", data-caption="Гиперболическая мешалка JBQ", src="/media/img/product-image.png", alt="Гиперболическая мешалка JBQ ")
+                .swiper-slide
+                  img(data-fancybox="product-gallery", data-caption="Гиперболическая мешалка JBQ", src="/media/img/product-image.png", alt="Гиперболическая мешалка JBQ ")
+                .swiper-slide
+                  img(data-fancybox="product-gallery", data-caption="Гиперболическая мешалка JBQ", src="/media/img/product-image.png", alt="Гиперболическая мешалка JBQ ")
+                .swiper-slide
+                  img(data-fancybox="product-gallery", data-caption="Гиперболическая мешалка JBQ", src="/media/img/product-image.png", alt="Гиперболическая мешалка JBQ ")
+              .swiper-button-next
+              .swiper-button-prev
+            .swiper(thumbsSlider="", class="product-swiper--thumbs")
+              .swiper-wrapper
+                .swiper-slide
+                  img(src="/media/img/product-image.png")
+                .swiper-slide
+                  img(src="/media/img/product-image.png")
+                .swiper-slide
+                  img(src="/media/img/product-image.png")
+                .swiper-slide
+                  img(src="/media/img/product-image.png")
+                .swiper-slide
+                  img(src="/media/img/product-image.png")
+                .swiper-slide
+                  img(src="/media/img/product-image.png")
+                .swiper-slide
+                  img(src="/media/img/product-image.png")
+                .swiper-slide
+                  img(src="/media/img/product-image.png")
+                .swiper-slide
+                  img(src="/media/img/product-image.png")
+                .swiper-slide
+                  img(src="/media/img/product-image.png")
+          .product-text--wrp
+            menu.product-page--btns
+              button#product-print(type="button", title="Распечатать")
+              button#product-share(type="button", title="Поделиться ссылкой")
+            .product-text.content
+              p
+                b.product-hero--name Гиперболическая мешалка JBQ
+                | — это вертикальное устройство для
+                | перемешивания, оснащенное рабочим колесом с вращающейся поверхностью, имеющей форму гиперболической
+                | кривой.
+              p
+                | Мешалка создает широкую зону равномерного перемешивания по кругу и предназначена для работы в резервуарах
+                | большого объема, включая открытые аэротенки и денитрификаторы.
+            .product-cta
+              button(data-popup="#", title="Запросить КП", type="button", class="btn btn-primary")
+                | Запросить
+                | КП
+              a(href="#", download="", title="Скачать опросный лист", class="btn btn-blue border")
+                img(loading="lazy", src="/media/img/icons/download.svg", alt="" aria-hidden="true")
+                span Скачать опросный лист
+    .mt-16
+      section.tabs
+        .container
+          nav(aria-label="Навигация по табам", class="tabs-nav")
+            ul
+              li
+                a(href="#tabpanel1", role="tab", aria-controls="tabpanel1", aria-selected="true") Описание
+              li
+                a(href="#tabpanel2", role="tab", aria-controls="tabpanel2") Технические характеристики
+        #tabpanel1(role="tabpanel", tabindex="0", aria-labelledby="tab1", class="tabs-content content")
+          .product-info
+            .container
+              h2.page-title.md.mb-8 Состав изделия
+              ol
+                li Мотор редуктор
+                li Вал
+                li Рабочее колесо
+                li Донная опора (донный подшипник)
+              .product-info--imgs
+                img(data-fancybox="product-info", loading="lazy", src="/media/img/product-item2.png", data-caption="Мотор редуктор", alt="Мотор редуктор")
+                img(data-fancybox="product-info", loading="lazy", src="/media/img/product-item2.png", data-caption="Мотор редуктор", alt="Мотор редуктор")
+                img(data-fancybox="product-info", loading="lazy", src="/media/img/product-item2.png", data-caption="Мотор редуктор", alt="Мотор редуктор")
+                img(data-fancybox="product-info", loading="lazy", src="/media/img/product-item2.png", data-caption="Мотор редуктор", alt="Мотор редуктор")
+                img(data-fancybox="product-info", loading="lazy", src="/media/img/product-item2.png", data-caption="Мотор редуктор", alt="Мотор редуктор")
+                img(data-fancybox="product-info", loading="lazy", src="/media/img/product-item2.png", data-caption="Мотор редуктор", alt="Мотор редуктор")
+              .product-info--video
+                video(controls, src="/media/video/kitten.mp4")
+                video(controls, src="/media/video/kitten.mp4")
+                video(controls, src="/media/video/kitten.mp4")
+                video(controls, src="/media/video/kitten.mp4")
+          .product-info
+            .container
+              h2.page-title.md.mb-8 Преимущества гиперболической погружной мешалки
+              ol
+                li Устойчива к наматыванию тряпок и других предметов.
+                li Легкость установки.
+                li
+                  | Удобный контроль состояния привода без необходимости извлечения из воды, что упрощает обслуживание.
+                li Полная защита электропривода от проникновения воды.
+                li Обеспечивает однородный поток без пульсаций.
+                li Привод расположен выше уровня воды, что исключает его повреждение при разрушении уплотнений.
+          .product-info
+            .container
+              h2.page-title.md.mb-8 Особенности гиперболической погружной мешалки
+              ul
+                li Равномерное перемешивание без застойных зон
+                li Эффективная работа в крупных резервуарах
+                li Самоочищающееся рабочее колесо
+                li Низкое энергопотребление благодаря аэродинамичной форме
+          .product-info
+            .container
+              h2.page-title.md.mb-8 Принцип работы мешалки JBQ
+              p
+                | Гиперболическая мешалка состоит из мотор-редуктора, расположенного над перемешиваемой средой, вала из
+                | нержавеющей стали и стеклопластикового рабочего колеса, опирающегося на донную опору. Жидкость движется от
+                | центра крыльчатки, создавая вращение по касательной и циркулируя сверху вниз вдоль вала. Поток, отражаясь
+                | от стенок емкости, обеспечивает эффективное перемешивание.
+              .product-info--video
+                video(controls, src="/media/video/kitten.mp4")
+          .product-info
+            .container
+              h2.page-title.md.mb-8 Условия эксплуатации
+              ul
+                li Температура перемешиваемой жидкости: ≤50°С.
+                li Плотность перемешиваемой жидкости: ≤1200 кг/м³.
+                li Глубина установки без дополнительной донной опоры: ≤3 м.
+                li Глубина установки с донной опорой: ≤12м.
+          .product-info
+            .container
+              h2.page-title.md.mb-8 Области применения
+              p
+                | Гиперболические мешалки используются в аэротенках очистных сооружений, когда необходимо высокоэффективное
+                | вертикальное перемешивание среды. В отличие от традиционных погружных лопастных мешалок, гиперболическая
+                | мешалка создает широкую круговую зону равномерного перемешивания. Простая конструкция этой мешалки
+                | облегчает её монтаж и обслуживание.
+          .product-info
+            .container
+              h2.page-title.md.mb-8 Подбор типоразмера мешалки
+              p
+                | При выборе типоразмера гиперболической мешалки необходимо учитывать форму и габариты резервуара, свойства
+                | перемешиваемой жидкости. Эффективная работа мешалки обеспечена при условии, что длина и ширина резервуара
+                | для зоны перемешивания мешалки находятся в соотношении до 2 к 1. В противном случае резервуар необходимо
+                | поделить на рабочие ячейки с требуемым соотношением сторон.
+        #tabpanel2(role="tabpanel", tabindex="0", aria-labelledby="tab2", hidden, class="tabs-content content")
+          .product-info
+            .container
+              p
+                | Модельный ряд и характеристики промышленного оборудования. Мы предлагаем как готовые модели, так и
+                | производство изделий по индивидуальному заказу.
+              .table-wrp.mt-6
+                table
+                  thead
+                    tr
+                      th Модель
+                      th HMV 1000-42-0.55
+                      th HMV 1500-27-0.75
+                      th HMV 2000-25-1.5
+                      th HMV 2500-18-2.2
+                      th HMV 2800-15-3.0
+                  tbody
+                    tr
+                      td Установленная мощность, кВт
+                      td 0.55
+                      td 0.75
+                      td 1.5
+                      td 2.2
+                      td 3.0
+                    tr
+                      td Диаметр рабочего колеса, мм
+                      td 0.55
+                      td 0.75
+                      td 1.5
+                      td 2.2
+                      td 3.0
+                    tr
+                      td Частота вращения, об/мин
+                      td 0.55
+                      td 0.75
+                      td 1.5
+                      td 2.2
+                      td 3.0
+                    tr
+                      td Электродвигатель
+                      td 0.55
+                      td 0.75
+                      td 1.5
+                      td 2.2
+                      td 3.0
+                    tr
+                      td Диаметр вала, мм
+                      td 0.55
+                      td 0.75
+                      td 1.5
+                      td 2.2
+                      td 3.0
+                    tr
+                      td Длина вала, мм
+                      td 0.55
+                      td 0.75
+                      td 1.5
+                      td 2.2
+                      td 3.0
+                    tr
+                      td Вес в сборе, кг
+                      td 0.55
+                      td 0.75
+                      td 1.5
+                      td 2.2
+                      td 3.0
+      section.container.mt-16
+        h2.page-title.md.mb-8 Реализованные объекты
+        ul.product-in-work
+          li.aspect-square.object-card
+            img(loading="lazy", src="/media/img/object.png", alt="ОС “Ухта”")
+            p ОС “Ухта”
+          li.aspect-square.object-card
+            img(loading="lazy", src="/media/img/object.png", alt="ОС “Ухта”")
+            p ОС “Ухта”
+      section.container.mt-16
+        h2.page-title.md.mb-8 Другое оборудование
+        ul.product-list.grid.grid-cols-4.gap-5.mt-8
+          li
+            article.product-card
+              .product-img--wrp
+                img(loading="lazy", src="/media/img/product.png", alt="")
+              h3 Погружной насос WQ
+              a(href="/product.html", title="Подробнее: Погружной насос WQ")
+                | Подробнее
+                img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+          li
+            article.product-card
+              .product-img--wrp
+                img(loading="lazy", src="/media/img/product.png", alt="")
+              h3 Погружной насос WQ
+              a(href="/product.html", title="Подробнее: Погружной насос WQ")
+                | Подробнее
+                img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+          li
+            article.product-card
+              .product-img--wrp
+                img(loading="lazy", src="/media/img/product.png", alt="")
+              h3 Погружной насос WQ
+              a(href="/product.html", title="Подробнее: Погружной насос WQ")
+                | Подробнее
+                img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+          li
+            article.product-card
+              .product-img--wrp
+                img(loading="lazy", src="/media/img/product.png", alt="")
+              h3 Погружной насос WQ
+              a(href="/product.html", title="Подробнее: Погружной насос WQ")
+                | Подробнее
+                img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+    section.cta-popup--wrp
+      .container
+        h3.page-title.md.mb-8 Свяжитесь с нами
+        .cta-popup--flex
+          p
+            | Не нашли ответ на свой вопрос? Оставьте свои контактные данные, и наши специалисты свяжутся с вами в
+            | ближайшее время.
+          button(data-popup="#", type="button", title="Задать вопрос", class="btn btn-secondary") Задать вопрос
+    //-footer
+    include includes/footer.pug

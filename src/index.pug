@@ -1,0 +1,294 @@
+doctype html
+html(lang="ru")
+  //- head
+  include includes/head.pug
+  body
+    //-loader
+    include includes/loader.pug
+    //- header
+    include includes/header.pug
+    //-top menu
+    include includes/top-menu.pug
+    //-hero
+    include includes/index/hero.pug
+    //-services
+    section.container.mb-32
+      h2.page-title Наши услуги
+      ul.grid.grid-cols-3.gap-5
+        li.service-card
+          .service-img
+            img(loading="lazy", src="/media/img/service-item.png", alt="")
+          p Механическая очистка
+        li.service-card
+          .service-img
+            img(loading="lazy", src="/media/img/service-item.png", alt="")
+          p Механическая очистка
+        li.service-card
+          .service-img
+            img(loading="lazy", src="/media/img/service-item.png", alt="")
+          p Механическая очистка
+    //-objects
+    section.container.mb-32
+      h2.page-title Наши объекты
+      ul.grid.grid-cols-4.gap-5
+        li.aspect-square.col-span-1.object-card
+          img(loading="lazy", src="/media/img/object.png", alt="ОС “Ухта”")
+          p ОС “Ухта”
+        li.col-span-2.object-card
+          img(loading="lazy", src="/media/img/object.png", alt="ОС “Ухта”")
+          p ОС “Ухта”
+        li.aspect-square.col-span-1.object-card
+          img(loading="lazy", src="/media/img/object.png", alt="ОС “Ухта”")
+          p ОС “Ухта”
+        li.col-span-2.object-card
+          img(loading="lazy", src="/media/img/object.png", alt="ОС “Ухта”")
+          p ОС “Ухта”
+        li.aspect-square.col-span-1.object-card
+          img(loading="lazy", src="/media/img/object.png", alt="ОС “Ухта”")
+          p ОС “Ухта”
+        li.aspect-square.col-span-1.object-card
+          img(loading="lazy", src="/media/img/object.png", alt="ОС “Ухта”")
+          p ОС “Ухта”
+    //-products
+    section.container.mb-32
+      h2.page-title Наше оборудование
+      ul.product-list.grid.grid-cols-4.gap-5
+        li
+          article.product-card
+            .product-img--wrp
+              img(loading="lazy", src="/media/img/product.png", alt="")
+            h3 Погружной насос WQ
+            a(href="/product.html", title="Подробнее: Погружной насос WQ")
+              | Подробнее
+              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+        li
+          article.product-card
+            .product-img--wrp
+              img(loading="lazy", src="/media/img/product.png", alt="")
+            h3 Погружной насос WQ
+            a(href="/product.html", title="Подробнее: Погружной насос WQ")
+              | Подробнее
+              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+        li
+          article.product-card
+            .product-img--wrp
+              img(loading="lazy", src="/media/img/product.png", alt="")
+            h3 Погружной насос WQ
+            a(href="/product.html", title="Подробнее: Погружной насос WQ")
+              | Подробнее
+              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+        li
+          article.product-card
+            .product-img--wrp
+              img(loading="lazy", src="/media/img/product.png", alt="")
+            h3 Погружной насос WQ
+            a(href="/product.html", title="Подробнее: Погружной насос WQ")
+              | Подробнее
+              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+        li
+          article.product-card
+            .product-img--wrp
+              img(loading="lazy", src="/media/img/product.png", alt="")
+            h3 Погружной насос WQ
+            a(href="/product.html", title="Подробнее: Погружной насос WQ")
+              | Подробнее
+              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+        li
+          article.product-card
+            .product-img--wrp
+              img(loading="lazy", src="/media/img/product.png", alt="")
+            h3 Погружной насос WQ
+            a(href="/product.html", title="Подробнее: Погружной насос WQ")
+              | Подробнее
+              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+        li
+          article.product-card
+            .product-img--wrp
+              img(loading="lazy", src="/media/img/product.png", alt="")
+            h3 Погружной насос WQ
+            a(href="/product.html", title="Подробнее: Погружной насос WQ")
+              | Подробнее
+              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+        li
+          article.product-card
+            .product-img--wrp
+              img(loading="lazy", src="/media/img/product.png", alt="")
+            h3 Погружной насос WQ
+            a(href="/product.html", title="Подробнее: Погружной насос WQ")
+              | Подробнее
+              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+    //-about
+    section.about-section.mb-32
+      .container.grid.grid-cols-2.gap-16
+        .about-text
+          h2.page-title.white О компании LANWU
+          p
+            | Мы — лидеры в производстве оборудования для очистки сточных вод, и
+            | наша миссия — сделать мир чище, обеспечивая надежные и эффективные
+            | решения для сохранения водных ресурсов.
+          p
+            | С самого начала нашего пути мы стремились к совершенству,
+            | разрабатывая инновационные системы очистки, которые удовлетворяют
+            | самые высокие экологические стандарты. Наше оборудование находит
+            | применение в самых различных сферах — от городских коммунальных
+            | систем до крупных промышленных объектов. Мы гордимся индивидуальным
+            | подходом к каждому клиенту, обеспечивая уникальные решения для
+            | каждой конкретной задачи.
+          p
+            | В LANWU мы собрали команду увлеченных профессионалов, для которых
+            | чистота воды — не просто работа, а призвание. Наши инженеры и
+            | специалисты ежедневно работают над совершенствованием технологий,
+            | предлагая продукты, которые не только отвечают текущим потребностям,
+            | но и формируют будущее.
+          p
+            | Мы знаем, что доверие наших клиентов заслуживается качеством,
+            | надежностью и ответственностью. Когда вы выбираете нас, вы выбираете
+            | не просто оборудование, а партнера, который заботится о вашей
+            | репутации и будущем нашей планеты.
+        .about-swiper--wrp
+          .swiper.about-swiper
+            .swiper-wrapper
+              .swiper-slide
+                img(loading="lazy", src="/media/img/abour-slide.png", alt="")
+              .swiper-slide
+                img(loading="lazy", src="/media/img/abour-slide.png", alt="")
+              .swiper-slide
+                img(loading="lazy", src="/media/img/abour-slide.png", alt="")
+              .swiper-slide
+                img(loading="lazy", src="/media/img/abour-slide.png", alt="")
+              .swiper-slide
+                img(loading="lazy", src="/media/img/abour-slide.png", alt="")
+              .swiper-slide
+                img(loading="lazy", src="/media/img/abour-slide.png", alt="")
+              .swiper-slide
+                img(loading="lazy", src="/media/img/abour-slide.png", alt="")
+              .swiper-slide
+                img(loading="lazy", src="/media/img/abour-slide.png", alt="")
+              .swiper-slide
+                img(loading="lazy", src="/media/img/abour-slide.png", alt="")
+            .swiper-button-next
+            .swiper-button-prev
+    //-why we
+    section.container.mb-32
+      h2.page-title Почему нас выбирают?
+      ul.why-we--list.grid.grid-cols-4.gap-5
+        li
+          img(loading="lazy", src="/media/img/why/Sertificate.svg.svg", alt="")
+          p
+            | Оборудование сертифицировано и выпускается под собственной торговой
+            | маркой
+        li
+          img(loading="lazy", src="/media/img/why/Optimization.svg.svg", alt="")
+          p Точный расчет производительности для оптимизации расходов
+        li
+          img(loading="lazy", src="/media/img/why/Control.svg.svg", alt="")
+          p Контроль за документацией проектов
+        li
+          img(loading="lazy", src="/media/img/why/Real.svg.svg", alt="")
+          p Контроль за выполнением работ на всех этапах реализации проекта
+        li
+          img(loading="lazy", src="/media/img/why/Tech-Support.svg.svg", alt="")
+          p Сервисный центр, гарантийное и постгарантийное обслуживание
+        li
+          img(loading="lazy", src="/media/img/why/Check.svg.svg", alt="")
+          p Учитываем все пожелания заказчика
+        li
+          img(loading="lazy", src="/media/img/why/Modernization.svg.svg", alt="")
+          p Реконструкции и модернизации устаревших очистных сооружении
+        li
+          img(loading="lazy", src="/media/img/why/Clients.svg.svg", alt="")
+          p Большой опыт работы с зарубежными клиентами
+    //-steps
+    section.steps-wrp.mb-32.pt-12.pb-20
+      .container
+        h2.page-title Этапы работы
+        ol.steps
+          li
+            .step-card
+              img(loading="lazy", src="/media/img/steps/List.svg", alt="Опросный лист")
+              p Заполнение клиентом опросного листа
+          li
+            .step-card
+              img(loading="lazy", src="/media/img/steps/Analytics.svg", alt="Подбор оборудования")
+              p Подбор оборудования и выставление ТКП
+          li
+            .step-card
+              img(loading="lazy", src="/media/img/steps/Files.svg", alt="Заключение договора")
+              p Заключение договора и предоплата
+          li
+            .step-card
+              img(loading="lazy", src="/media/img/steps/Logistic.svg", alt="Производство, транспортировка")
+              p Производство, транспортировка
+          li
+            .step-card
+              img(loading="lazy", src="/media/img/steps/Task done.svg", alt="пусконаладочные работы")
+              p Установка, пусконаладочные работы и запуск
+          li
+            .step-card
+              img(loading="lazy", src="/media/img/steps/Control.svg", alt="Контроль работы ОС")
+              p Контроль работы ОС, гарантийное обслуживание
+    //-news
+    section.container.mb-16
+      h2.page-title.flex
+        | Новости компании
+        a(href="#", title="Все новости") Все новости
+      ol.grid.grid-cols-3.gap-5
+        li
+          article.news-card
+            img(loading="lazy", src="/media/img/news.png", alt="")
+            footer
+              time(datetime="#") 1.05.2024
+            header
+              h4 Поздравляем с 1 Мая — праздником весны и труда!
+            a(href="#", title="Читать новость: Поздравляем с 1 Мая — праздником весны и труда!") Читать новость
+        li
+          article.news-card
+            img(loading="lazy", src="/media/img/news.png", alt="")
+            footer
+              time(datetime="#") 1.05.2024
+            header
+              h4 Поздравляем с 1 Мая — праздником весны и труда!
+            a(href="#", title="Читать новость: Поздравляем с 1 Мая — праздником весны и труда!") Читать новость
+        li
+          article.news-card
+            img(loading="lazy", src="/media/img/news.png", alt="")
+            footer
+              time(datetime="#") 1.05.2024
+            header
+              h4 Поздравляем с 1 Мая — праздником весны и труда!
+            a(href="#", title="Читать новость: Поздравляем с 1 Мая — праздником весны и труда!") Читать новость
+    //-bottom form
+    form(class="bottom_form", action="#", method="post")
+      fieldset(class="m-auto max-w-[790px]")
+        legend Остались вопросы? Мы ответим!
+        p
+          | Заполните форму ниже, и наш менеджер свяжется с Вами в самое ближайшее
+          | время: проконсультирует по услугам компании и предложит лучшие условия
+          | сотрудничества.
+        .grid.grid-cols-4.gap-5.mb-5
+          label.input-wrp.col-span-2
+            span Имя
+            input(type="text", name="name", autocomplete="name", required)
+          label.input-wrp.col-span-2
+            span Фамилия
+            input(type="text", name="family", autocomplete="family-name", required)
+          label.input-wrp.col-span-2
+            span E-mail
+            input(type="email", name="email", autocomplete="email")
+          label.input-wrp.col-span-2
+            span Номер телефона
+            input(type="tel", name="tel", autocomplete="tel", required)
+        label.input-wrp.mb-5
+          span Сообщение
+          textarea(name="msg")
+        label.input-wrp--check
+          input(type="checkbox", name="req", checked)
+          span
+            | Я даю свое согласие на обработку моих персональных данных и
+            | соглашаюсь с
+            a(href="#", target="_blank") Политикой конфиденциальности
+            | .
+        button(type="submit", title="Отправить", class="btn btn-secondary mt-5")
+          | Отправить
+    //-footer
+    include includes/footer.pug
