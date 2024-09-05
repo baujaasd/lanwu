@@ -54,69 +54,21 @@ html(lang="ru")
       h2.page-title Наше оборудование
       ul.product-list.grid.grid-cols-4.gap-5
         li
-          article.product-card
-            .product-img--wrp
-              img(loading="lazy", src="/media/img/product.png", alt="")
-            h3 Погружной насос WQ
-            a(href="/product.html", title="Подробнее: Погружной насос WQ")
-              | Подробнее
-              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+          include includes/product-card.pug
         li
-          article.product-card
-            .product-img--wrp
-              img(loading="lazy", src="/media/img/product.png", alt="")
-            h3 Погружной насос WQ
-            a(href="/product.html", title="Подробнее: Погружной насос WQ")
-              | Подробнее
-              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+          include includes/product-card.pug
         li
-          article.product-card
-            .product-img--wrp
-              img(loading="lazy", src="/media/img/product.png", alt="")
-            h3 Погружной насос WQ
-            a(href="/product.html", title="Подробнее: Погружной насос WQ")
-              | Подробнее
-              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+          include includes/product-card.pug
         li
-          article.product-card
-            .product-img--wrp
-              img(loading="lazy", src="/media/img/product.png", alt="")
-            h3 Погружной насос WQ
-            a(href="/product.html", title="Подробнее: Погружной насос WQ")
-              | Подробнее
-              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+          include includes/product-card.pug
         li
-          article.product-card
-            .product-img--wrp
-              img(loading="lazy", src="/media/img/product.png", alt="")
-            h3 Погружной насос WQ
-            a(href="/product.html", title="Подробнее: Погружной насос WQ")
-              | Подробнее
-              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+          include includes/product-card.pug
         li
-          article.product-card
-            .product-img--wrp
-              img(loading="lazy", src="/media/img/product.png", alt="")
-            h3 Погружной насос WQ
-            a(href="/product.html", title="Подробнее: Погружной насос WQ")
-              | Подробнее
-              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+          include includes/product-card.pug
         li
-          article.product-card
-            .product-img--wrp
-              img(loading="lazy", src="/media/img/product.png", alt="")
-            h3 Погружной насос WQ
-            a(href="/product.html", title="Подробнее: Погружной насос WQ")
-              | Подробнее
-              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+          include includes/product-card.pug
         li
-          article.product-card
-            .product-img--wrp
-              img(loading="lazy", src="/media/img/product.png", alt="")
-            h3 Погружной насос WQ
-            a(href="/product.html", title="Подробнее: Погружной насос WQ")
-              | Подробнее
-              img(loading="lazy", aria-hidden="true", src="/media/img/icons/arrow-left.svg", alt="")
+          include includes/product-card.pug
     //-about
     section.about-section.mb-32
       .container.grid.grid-cols-2.gap-16
@@ -258,37 +210,6 @@ html(lang="ru")
               h4 Поздравляем с 1 Мая — праздником весны и труда!
             a(href="#", title="Читать новость: Поздравляем с 1 Мая — праздником весны и труда!") Читать новость
     //-bottom form
-    form(class="bottom_form", action="#", method="post")
-      fieldset(class="m-auto max-w-[790px]")
-        legend Остались вопросы? Мы ответим!
-        p
-          | Заполните форму ниже, и наш менеджер свяжется с Вами в самое ближайшее
-          | время: проконсультирует по услугам компании и предложит лучшие условия
-          | сотрудничества.
-        .grid.grid-cols-4.gap-5.mb-5
-          label.input-wrp.col-span-2
-            span Имя
-            input(type="text", name="name", autocomplete="name", required)
-          label.input-wrp.col-span-2
-            span Фамилия
-            input(type="text", name="family", autocomplete="family-name", required)
-          label.input-wrp.col-span-2
-            span E-mail
-            input(type="email", name="email", autocomplete="email")
-          label.input-wrp.col-span-2
-            span Номер телефона
-            input(type="tel", name="tel", autocomplete="tel", required)
-        label.input-wrp.mb-5
-          span Сообщение
-          textarea(name="msg")
-        label.input-wrp--check
-          input(type="checkbox", name="req", checked)
-          span
-            | Я даю свое согласие на обработку моих персональных данных и
-            | соглашаюсь с
-            a(href="#", target="_blank") Политикой конфиденциальности
-            | .
-        button(type="submit", title="Отправить", class="btn btn-secondary mt-5")
-          | Отправить
+    include includes/index/bottom-form.pug
     //-footer
     include includes/footer.pug

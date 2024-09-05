@@ -7,7 +7,6 @@
     "build": "pug src/ -o dist/ -P",
     "watch": "pug src/ -o dist/ -P -w",
     "serve": "browser-sync start --server 'dist' --files 'dist/*.html, src/css/*.css'",
-    "deploy": "gh-pages -d dist",
     "dev": "npm-run-all --parallel watch serve"
   },
   "keywords": [],
