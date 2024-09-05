@@ -107,23 +107,5 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // tailwind config
-  tailwind.config = {
-    theme: {
-      extend: {
-        container: {
-          center: true,
-          padding: "12px",
-        },
-        screens: {
-          xs: "575px",
-          sm: "640px",
-          md: "768px",
-          lg: "1024px",
-          xl: "1280px",
-          "2xl": "1344px",
-        },
-      },
-    },
-  };
+  // end
 });

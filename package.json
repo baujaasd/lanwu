@@ -7,14 +7,19 @@
     "build": "pug src/ -o dist/ -P",
     "watch": "pug src/ -o dist/ -P -w",
     "serve": "browser-sync start --server 'dist' --files 'dist/*.html, src/css/*.css'",
-    "dev": "npm-run-all --parallel watch serve"
+    "dev": "npm-run-all --parallel watch serve",
+    "build:css": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "browser-sync": "^2.27.5",
     "gh-pages": "^6.1.1",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.45",
+    "tailwindcss": "^3.4.10"
   }
 }
