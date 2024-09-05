@@ -1,3 +1,4 @@
+//- callback
 dialog(id="callback-popup", class="popup_wrapper", aria-label="Диалоговое окно: Задать вопрос", aria-hidden="true")
   .popup.sm
     button(class="close_popup", type="button", title="Закрыть")
@@ -5,6 +6,36 @@ dialog(id="callback-popup", class="popup_wrapper", aria-label="Диалогов�
       form(action="#", method="post")
         fieldset
           legend.popup-title Задать вопрос 
+          label.input-wrp.mb-5
+            span.text-white Ваше имя
+            input(type="text", name="name", autocomplete="name", required)
+          label.input-wrp.mb-5
+            span.text-white Email
+            input(type="email", name="email", autocomplete="email", required)
+          label.input-wrp.mb-5
+            span.text-white Номер телефона
+            input(type="tel", name="tel", autocomplete="tel", required)
+          label.input-wrp.mb-5
+            span.text-white Сообщение
+            textarea(name="msg")
+          label.input-wrp--check
+            input(type="checkbox", name="req", checked)
+            span.text-white.text-xs
+              | Я даю свое согласие на обработку моих персональных данных и
+              | соглашаюсь с 
+              a(class="text-white text-xs", href="#", target="_blank") Политикой конфиденциальности
+              | .
+          button(type="submit", title="Отправить", class="btn btn-primary w-full mt-5")
+            | Отправить
+
+//- send review
+dialog(id="review-popup", class="popup_wrapper", aria-label="Диалоговое окно: Оставить отзыв", aria-hidden="true")
+  .popup.sm
+    button(class="close_popup", type="button", title="Закрыть")
+    .popup-content
+      form(action="#", method="post")
+        fieldset
+          legend.popup-title Оставить отзыв
           label.input-wrp.mb-5
             span.text-white Ваше имя
             input(type="text", name="name", autocomplete="name", required)
