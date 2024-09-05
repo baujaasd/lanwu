@@ -78,13 +78,7 @@ html(lang="ru")
           img(data-fancybox="reviews-gallery", loading="lazy", src="media/img/review.jpg", data-caption="Благодарственное письмо", alt="Благодарственное письмо")
           img(data-fancybox="reviews-gallery", loading="lazy", src="media/img/review.jpg", data-caption="Благодарственное письмо", alt="Благодарственное письмо")
           img(data-fancybox="reviews-gallery", loading="lazy", src="media/img/review.jpg", data-caption="Благодарственное письмо", alt="Благодарственное письмо")
-    section.cta-popup--wrp
-      .container
-        h2.page-title.md.mb-8 Свяжитесь с нами
-          .cta-popup--flex
-            p
-              | Не нашли ответ на свой вопрос? Оставьте свои контактные данные, и наши специалисты свяжутся с вами в
-              | ближайшее время.
-            button(data-popup="#", type="button", title="Задать вопрос", class="btn btn-secondary") Задать вопрос
+    //- cta callback
+    include includes/cta-callback.pug
     //-footer
     include includes/footer.pug

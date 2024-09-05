@@ -1,12 +1,12 @@
 :root {
   --overflowBg: rgba(0, 0, 0, .25);
-  --popupBg: #fff;
+  --popupBg: #11242B;
   --popupShadow: 0 6px 35px 15px rgba(0, 0, 0, .1);
   --blur: 5px;
-  --popupPadding: 12px;
-  --popupBorderRadius: 8px;
+  --popupPadding: 32px 72px;
+  --popupBorderRadius: 24px;
   --transition: .15s ease-in-out;
-  --closeBtnUrl: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMTAuNDE0MSIgeT0iOS4yMTMyIiB3aWR0aD0iMzAiIGhlaWdodD0iMiIgcng9IjEiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDEwLjQxNDEgOS4yMTMyKSIgZmlsbD0iIzBCMDIxRCIvPgo8cmVjdCB4PSI5IiB5PSIzMC4yMTMyIiB3aWR0aD0iMzAiIGhlaWdodD0iMiIgcng9IjEiIHRyYW5zZm9ybT0icm90YXRlKC00NSA5IDMwLjIxMzIpIiBmaWxsPSIjMEIwMjFEIi8+Cjwvc3ZnPgo=");
+  --closeBtnUrl: url("../media/img/icons/cross.svg");
 }
 
 [data-popup] * {
@@ -103,7 +103,7 @@ html.lock {
   position: relative;
   padding: var(--popupPadding);
   background: var(--popupBg);
-  color: black;
+  color: #fff;
   border: none;
   max-width: 760px;
   width: 100%;
@@ -594,11 +594,11 @@ html.lock {
   appearance: none;
   position: absolute;
   z-index: 995;
-  top: 4px;
-  right: 4px;
+  top: 24px;
+  right: 24px;
   background: transparent var(--closeBtnUrl) center/cover no-repeat;
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   display: block;
   border: none;
   border-radius: 0;

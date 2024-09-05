@@ -24,7 +24,6 @@
     <script src="js/fancybox.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/app.js"></script>
-    <base href="/lanwu/dist/">
   </head>
   <body>
     <div id="loader"></div>
@@ -254,14 +253,15 @@
     </section>
     <section class="cta-popup--wrp">
       <div class="container">
-        <h3 class="page-title md mb-8">Свяжитесь с нами</h3>
-        <div class="cta-popup--flex">
-          <p>
-            Не нашли ответ на свой вопрос? Оставьте свои контактные данные, и наши специалисты свяжутся с вами в
-            ближайшее время.
-          </p>
-          <button class="btn btn-secondary" data-popup="#" type="button" title="Задать вопрос">Задать вопрос</button>
-        </div>
+        <h2 class="page-title md mb-8">Свяжитесь с нами
+          <div class="cta-popup--flex">
+            <p>
+              Не нашли ответ на свой вопрос? Оставьте свои контактные данные, и наши специалисты свяжутся с вами в
+              ближайшее время.
+            </p>
+            <button class="btn btn-secondary" data-popup="callback-popup" type="button" title="Задать вопрос">Задать вопрос</button>
+          </div>
+        </h2>
       </div>
     </section>
     <footer class="footer">
@@ -275,7 +275,37 @@
           </address>
         </div>
       </div>
-      <button id="to_top" type="button" title="Вверх"></button>
     </footer>
+    <button id="to_top" type="button" title="Вверх"></button>
+    <dialog class="popup_wrapper" id="callback-popup" aria-label="Диалоговое окно: Задать вопрос" aria-hidden="true">
+      <div class="popup sm">
+        <button class="close_popup" type="button" title="Закрыть"></button>
+        <div class="popup-content">
+          <form action="#" method="post">
+            <fieldset>
+              <legend class="popup-title">Задать вопрос </legend>
+              <label class="input-wrp mb-5"><span class="text-white">Ваше имя</span>
+                <input type="text" name="name" autocomplete="name" required>
+              </label>
+              <label class="input-wrp mb-5"><span class="text-white">Email</span>
+                <input type="email" name="email" autocomplete="email" required>
+              </label>
+              <label class="input-wrp mb-5"><span class="text-white">Номер телефона</span>
+                <input type="tel" name="tel" autocomplete="tel" required>
+              </label>
+              <label class="input-wrp mb-5"><span class="text-white">Сообщение</span>
+                <textarea name="msg"></textarea>
+              </label>
+              <label class="input-wrp--check">
+                <input type="checkbox" name="req" checked><span class="text-white text-xs">
+                  Я даю свое согласие на обработку моих персональных данных и
+                  соглашаюсь с <a class="text-white text-xs" href="#" target="_blank">Политикой конфиденциальности</a>.</span>
+              </label>
+              <button class="btn btn-primary w-full mt-5" type="submit" title="Отправить">Отправить</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>
