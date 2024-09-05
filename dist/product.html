@@ -436,5 +436,35 @@
         </div>
       </div>
     </dialog>
+    <dialog class="popup_wrapper" id="offer-popup" aria-label="Диалоговое окно: Запросить КП" aria-hidden="true">
+      <div class="popup sm">
+        <button class="close_popup" type="button" title="Закрыть"></button>
+        <div class="popup-content">
+          <form action="#" method="post">
+            <fieldset>
+              <legend class="popup-title">Запросить КП</legend>
+              <label class="input-wrp mb-5"><span class="text-white">Ваше имя</span>
+                <input type="text" name="name" autocomplete="name" required>
+              </label>
+              <label class="input-wrp mb-5"><span class="text-white">Email</span>
+                <input type="email" name="email" autocomplete="email" required>
+              </label>
+              <label class="input-wrp mb-5"><span class="text-white">Номер телефона</span>
+                <input type="tel" name="tel" autocomplete="tel" required>
+              </label>
+              <label class="input-wrp mb-5"><span class="text-white">Сообщение</span>
+                <textarea name="msg"></textarea>
+              </label>
+              <label class="input-wrp--check">
+                <input type="checkbox" name="req" checked><span class="text-white text-xs">
+                  Я даю свое согласие на обработку моих персональных данных и
+                  соглашаюсь с <a class="text-white text-xs" href="#" target="_blank">Политикой конфиденциальности</a>.</span>
+              </label>
+              <button class="btn btn-primary w-full mt-5" type="submit" title="Отправить">Отправить</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>
