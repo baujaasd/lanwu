@@ -49,26 +49,26 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('.tabs').forEach((tabsContainer, containerIndex) => {
     const tabs = tabsContainer.querySelectorAll('[role="tab"]');
     const tabPanels = tabsContainer.querySelectorAll('[role="tabpanel"]');
-  
+
     tabs.forEach((tab, index) => {
       const panelId = `tabpanel${containerIndex}-${index}`;
       const tabId = `tab${containerIndex}-${index}`;
-      
+
       tab.setAttribute('href', `#${panelId}`);
       tab.setAttribute('aria-controls', panelId);
       tab.setAttribute('id', tabId);
-      
+
       tabPanels[index].setAttribute('id', panelId);
       tabPanels[index].setAttribute('aria-labelledby', tabId);
     });
-  
+
     tabs.forEach(tab => {
       tab.addEventListener('click', event => {
         event.preventDefault();
-  
+
         tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
         tab.setAttribute('aria-selected', 'true');
-  
+
         tabPanels.forEach(panel => panel.hidden = true);
         const targetPanel = tabsContainer.querySelector(tab.getAttribute('href'));
         targetPanel.hidden = false;
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
   Fancybox.bind("[data-fancybox]", {
     // Your custom options
   });
-  
+
 
   // swipers
   var swiper = new Swiper(".about-swiper", {
@@ -106,6 +106,30 @@ document.addEventListener("DOMContentLoaded", function () {
       swiper: productSwiper,
     },
   });
+
+  // data-href
+  (() => {
+    document.addEventListener("click", (e) => {
+      // Проверим, есть ли у целевого элемента атрибут data-href
+      let target = e.target;
+
+      // Если у целевого элемента нет атрибута, ищем ближайшего родителя с атрибутом data-href
+      if (!target.hasAttribute('data-href')) {
+        target = target.closest('[data-href]');
+      }
+
+      // Если найден целевой элемент или его родитель с атрибутом data-href
+      if (target) {
+        const link = target.dataset.href || target.querySelector("a")?.href;
+
+        // Если ссылка найдена, выполняем перенаправление
+        if (link) {
+          window.location.href = link;
+        }
+      }
+    });
+  })();
+
 
   // end
 });

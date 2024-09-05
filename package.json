@@ -6,7 +6,7 @@
   "scripts": {
     "build": "pug src/ -o dist/ -P",
     "watch": "pug src/ -o dist/ -P -w",
-    "serve": "browser-sync start --server 'dist' --files 'dist/*.html, src/css/*.css, dist/css/*.css'",
+    "serve": "browser-sync start --server 'dist' --files 'dist/*.html, src/css/*.css, dist/css/*.css, dist/js/*.js'",
     "dev": "npm-run-all --parallel watch serve",
     "build:css": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.css --minify",
     "watch:css": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.css --watch"
